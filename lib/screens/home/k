@@ -1,0 +1,16 @@
+
+
+
+            RaisedButton(
+          child: Text('Sign in annonymously '),
+          onPressed: () async {
+            dynamic result = await _auth.signInAnnon();
+
+            if (result != null) {
+              print('Signed in ');
+              print(result.id);
+            } else {
+              print('Error in signing');
+            }
+          },
+        ),
